@@ -12,4 +12,14 @@ public class CustomLinkedList {
     	newNode.setNext(head);
     	head=newNode;
     }
+    
+    public void display()
+    {
+    	Node current=head;
+    	while(current!=null)
+    	{
+    		System.out.println(current.getData().getId());
+    		current=current.getNext();
+    	}
+    }
 }
