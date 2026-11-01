@@ -2,9 +2,9 @@
 public class Node {
 	private Task data;
 	private Node next;
-	public Node(Node next) {
-		super();
-		this.next = next;
+	
+	public Node(Task data) {
+	    this.data = data;
 	}
 	/**
 	 * @return the data
