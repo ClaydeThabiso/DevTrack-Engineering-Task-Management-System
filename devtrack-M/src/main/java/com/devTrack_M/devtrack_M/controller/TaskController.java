@@ -17,7 +17,6 @@ import com.devTrack_M.devtrack_M.service.TaskService;
 
 @RestController
 @RequestMapping("/api/tasks")
-@PathVariable Long id
 public class TaskController {
 
 	private final TaskService taskService;
@@ -55,6 +54,9 @@ public class TaskController {
 	}
 	
 	@PutMapping("/{id}")
-	public Task 
+	public Task updateTaskById(@PathVariable Long id, @PathVariable String title ,@PathVariable String description)
+	{
+		return taskService.updateTaskById(id, title, description);	
+	}
 	
 }
