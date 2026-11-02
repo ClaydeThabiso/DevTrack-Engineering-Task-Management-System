@@ -1,4 +1,4 @@
-package controller;
+package com.devTrack_M.devtrack_M.controller;
 
 import java.util.List;
 
@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Task;
-import service.TaskService;
+
+
+import com.devTrack_M.devtrack_M.entity.Task;
+import com.devTrack_M.devtrack_M.service.TaskService;
 
 @RestController
 @RequestMapping("/api/tasks")

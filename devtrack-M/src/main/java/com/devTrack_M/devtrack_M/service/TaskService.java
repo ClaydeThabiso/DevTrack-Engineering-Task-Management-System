@@ -1,11 +1,11 @@
-package service;
+package com.devTrack_M.devtrack_M.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import entity.Task;
-import repository.TaskRepository;
+import com.devTrack_M.devtrack_M.entity.Task;
+import com.devTrack_M.devtrack_M.repository.TaskRepository;
 
 @Service
 public class TaskService {
