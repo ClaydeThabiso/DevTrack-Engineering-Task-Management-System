@@ -50,6 +50,11 @@ public class Task {
 		this.description = description;
 	}
     
+	public void updateTask(String title, String description)
+	{
+		this.title=title;
+		this.description=description;
+	}
     
 
 }
