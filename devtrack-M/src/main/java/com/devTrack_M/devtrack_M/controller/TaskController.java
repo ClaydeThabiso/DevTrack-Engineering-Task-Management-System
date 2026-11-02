@@ -2,6 +2,7 @@ package com.devTrack_M.devtrack_M.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,16 +48,15 @@ public class TaskController {
 	    return taskService.findTaskById(id);
 	}
 	
-	@GetMapping("/{id}")
+	@DeleteMapping("/{id}")
 	public boolean removeTaskById(@PathVariable Long id)
 	{
 		return taskService.removeTaskById(id);
 	}
 	
 	@PutMapping("/{id}")
-	public Task updateTaskById(@PathVariable Long id, @PathVariable String title ,@PathVariable String description)
-	{
-		return taskService.updateTaskById(id, title, description);	
+	public Task updateTaskById(@PathVariable Long id, @RequestBody Task task) {
+	    return taskService.updateTaskById(id, task.getTitle(), task.getDescription());
 	}
 	
 }
